@@ -1,0 +1,36 @@
+{
+  "type": "array",
+  "length": 100,
+  "content": {
+    "type": "object",
+    "product_id": {
+      "type": "number",
+      "subtype": "u32",
+      "unique": true,
+      "id": {
+        "start_at": 1
+      }
+    },
+    "product_name": {
+      "type": "string",
+      "format": {
+        "format": "product_{gnerated_id}",
+        "arguments": {
+          "gnerated_id": {
+            "type": "same_as",
+            "ref": "product.content.product_id"
+          }
+        }
+      }
+      },
+      "product_price": {
+        "type": "number",
+        "subtype": "u32",
+        "range": {
+          "low": 10,
+          "high": 100,
+          "step": 1
+        }
+      }
+    }
+  }

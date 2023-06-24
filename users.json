@@ -1,0 +1,59 @@
+{
+    "type": "array",
+    "length": 1000,
+    "content": {
+        "type": "object",
+        "user_id": {
+            "type": "number",
+            "subtype": "u32",
+            "unique": true,
+            "range": {
+                "low": 0,
+                "high": 2000,
+                "step": 1
+            }
+        },
+        "first_name": {
+            "type": "string",
+            "faker": {
+                "generator": "first_name"
+            }
+        },
+        "last_name": {
+            "type": "string",
+            "faker": {
+                "generator": "last_name"
+            }
+        },
+        "email": {
+            "type": "string",
+            "faker": {
+                "generator": "safe_email"
+            }
+        },
+        "country":{
+            "type": "string",
+            "faker": {
+                "generator": "country_name"
+            }
+        },
+        "address": {
+            "type": "string",
+            "faker": {
+                "generator": "address"
+            }
+        },
+        "city": {
+            "type": "string",
+            "faker": {
+                "generator": "city_name"
+            }
+        },
+        "zip": {
+            "type": "string",
+            "faker": {
+                "generator": "zip_code"
+            }
+        }
+    }
+}
